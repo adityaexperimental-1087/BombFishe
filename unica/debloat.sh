@@ -83,10 +83,6 @@ system/etc/permissions/privapp-permissions-com.samsung.android.game.gamehome.xml
 system/priv-app/GameHome
 "
 
-ADD_TO_WORK_DIR "pa2qxxx" "system" \
-    "system/etc/permissions/signature-permissions-com.samsung.android.game.gamehome.xml" \
-    0 0 644 "u:object_r:system_file:s0"
-
 # Gemini shortcut
 PRODUCT_DEBLOAT+="
 app/BardShell
@@ -178,6 +174,11 @@ SYSTEM_DEBLOAT+="
 system/etc/permissions/privapp-permissions-com.mygalaxy.service.xml
 system/etc/sysconfig/preinstalled-packages-com.mygalaxy.service.xml
 system/priv-app/MyGalaxyService
+"
+
+# Phoneconfiguration
+SYSTEM_DEBLOAT+="
+system/priv-app/CIDManager
 "
 
 # Samsung Analytics

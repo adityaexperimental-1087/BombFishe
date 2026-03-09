@@ -22,3 +22,4 @@
 	path = external/signapk
 	url = https://github.com/UN1CA/external_signapk.git
 	ignore = dirty
+
