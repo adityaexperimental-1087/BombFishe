@@ -29,6 +29,7 @@ system/etc/sysconfig/samsungsimunlock.xml
 system/lib64/android.security.securekeygeneration-ndk.so
 system/lib64/libssu_keystore2.so
 system/priv-app/SsuService
+system/priv-app/CIDManager
 "
 
 # Recovery restoration script

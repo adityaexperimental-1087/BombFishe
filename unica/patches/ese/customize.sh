@@ -93,7 +93,7 @@ elif [[ "$SOURCE_SECURITY_CONFIG_ESE_CHIP_VENDOR" != "none" ]] && [[ "$SOURCE_SE
     fi
     if [[ "$SOURCE_SECURITY_CONFIG_ESE_COS_NAME" != "$TARGET_SECURITY_CONFIG_ESE_COS_NAME" ]]; then
         SMALI_PATCH "system" "system/framework/framework.jar" \
-            "smali_classes6/com/samsung/android/service/SemService/SemServiceManager.smali" "replaceall" \
+            "smali_classes7/com/samsung/android/service/SemService/SemServiceManager.smali" "replaceall" \
             "$SOURCE_SECURITY_CONFIG_ESE_COS_NAME" \
             "${TARGET_SECURITY_CONFIG_ESE_COS_NAME//none/}"
     fi
