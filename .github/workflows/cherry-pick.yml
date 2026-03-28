@@ -16,11 +16,25 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Fetch ALL branches (important)
+        run: |
+          git fetch --all --prune
+
+      - name: Verify commit exists
+        run: |
+          git branch -a
+          git log --all --grep=5d4518ff20f334b6d8389921e65fcb05a2266d6e || true
+
+      - name: Checkout target branch
+        run: git checkout sixteenQPR2
+
       - name: Cherry-pick commit
         run: |
-          git checkout sixteenQPR2
-          git cherry-pick 5d4518ff20f334b6d8389921e65fcb05a2266d6e || true
+          git cherry-pick 5d4518ff20f334b6d8389921e65fcb05a2266d6e
+
+      - name: Show latest commits
+        run: git log --oneline -5
 
       - name: Push changes
         run: |
-          git push origin sixteenQPR2
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/adityaexperimental-1087/BombFishe.git sixteenQPR2
