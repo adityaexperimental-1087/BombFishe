@@ -3,6 +3,9 @@ name: Cherry Pick Commit
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   cherry-pick:
     runs-on: ubuntu-latest
